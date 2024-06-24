@@ -1,0 +1,165 @@
+-- Exceptional Handling Notes
+Exception handling in Java is a powerful mechanism that allows developers to handle runtime errors, ensuring the normal flow of the application. Exceptions can be caught and handled using the try, catch, finally, and throw/throws keywords.
+
+Here’s a basic example of how to handle exceptions in Java:
+
+-- Code
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+        try {
+            // Code that may throw an exception
+            int a = 10;
+            int b = 0;
+            int result = a / b; // This will throw ArithmeticException
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            // This block will handle ArithmeticException
+            System.out.println("Error: Cannot divide by zero.");
+        } finally {
+            // This block will always execute
+            System.out.println("Finally block executed.");
+        }
+
+        System.out.println("Program continues...");
+    }
+}
+
+-- Explanation
+1. try block:- The code that might throw an exception is placed inside the try block.
+2. catch block:- The catch block is used to handle the specific exception that is thrown. In this example, it handles ArithmeticException.
+3. finally block: The finally block is optional and contains code that will always execute, regardless of whether an exception was thrown or not. It's typically used for cleanup activities, such as closing files or releasing resources.
+4. Program continues...: This line demonstrates that after handling the exception, the program can continue to execute.
+
+-- Example: Custom Exception Handling
+You can also create your own custom exceptions by extending the Exception class. Here’s an example:
+
+-- Code
+// Define a custom exception class
+class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+
+public class CustomExceptionHandling {
+    public static void main(String[] args) {
+        try {
+            validate(15);
+        } catch (CustomException e) {
+            System.out.println("Caught the exception: " + e.getMessage());
+        }
+
+        System.out.println("Program continues...");
+    }
+
+    // Method to validate age
+    static void validate(int age) throws CustomException {
+        if (age < 18) {
+            throw new CustomException("Age is not valid to vote");
+        } else {
+            System.out.println("Welcome to vote!");
+        }
+    }
+}
+
+-- Explanation:
+1. CustomException class: This class extends the Exception class to create a custom exception type.
+2. validate method: This method throws a CustomException if the age is less than 18.
+3. try-catch block: The validate method is called within a try block, and the custom exception is caught in the catch block.
+
+By using these techniques, you can effectively handle exceptions in Java, making your programs more robust and error-resistant.
+
+--------------------------------------------------------Real Life Example--------------------------------------------------------
+In real-life projects, exception handling in Java is crucial for ensuring that the application can gracefully handle unexpected situations and continue to function correctly. Here, I'll present an example of a real-life scenario involving a simple banking application that handles exceptions during transactions such as withdrawals and deposits.
+
+Example: Banking Application
+This example demonstrates how to handle exceptions related to invalid transactions, such as insufficient funds or invalid amounts.
+
+Step 1: Define Custom Exceptions
+// Custom exception for insufficient funds
+class InsufficientFundsException extends Exception {
+    public InsufficientFundsException(String message) {
+        super(message);
+    }
+}
+
+// Custom exception for invalid amount
+class InvalidAmountException extends Exception {
+    public InvalidAmountException(String message) {
+        super(message);
+    }
+}
+Step 2: Create the Bank Account Class
+class BankAccount {
+    private double balance;
+
+    public BankAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    // Method to deposit money
+    public void deposit(double amount) throws InvalidAmountException {
+        if (amount <= 0) {
+            throw new InvalidAmountException("Invalid amount. Deposit amount must be greater than zero.");
+        }
+        balance += amount;
+        System.out.println("Successfully deposited: $" + amount);
+    }
+
+    // Method to withdraw money
+    public void withdraw(double amount) throws InsufficientFundsException, InvalidAmountException {
+        if (amount <= 0) {
+            throw new InvalidAmountException("Invalid amount. Withdrawal amount must be greater than zero.");
+        }
+        if (amount > balance) {
+            throw new InsufficientFundsException("Insufficient funds. Available balance: $" + balance);
+        }
+        balance -= amount;
+        System.out.println("Successfully withdrew: $" + amount);
+    }
+
+    // Method to check balance
+    public double getBalance() {
+        return balance;
+    }
+}
+Step 3: Main Application with Exception Handling
+public class BankingApplication {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(500.00); // Initial balance of $500
+
+        try {
+            System.out.println("Initial Balance: $" + account.getBalance());
+            account.deposit(200.00); // Deposit $200
+            System.out.println("Balance after deposit: $" + account.getBalance());
+
+            account.withdraw(100.00); // Withdraw $100
+            System.out.println("Balance after withdrawal: $" + account.getBalance());
+
+            account.withdraw(700.00); // Attempt to withdraw $700 (should fail)
+        } catch (InvalidAmountException | InsufficientFundsException e) {
+            System.out.println("Transaction failed: " + e.getMessage());
+        }
+
+        try {
+            account.deposit(-50.00); // Attempt to deposit an invalid amount (should fail)
+        } catch (InvalidAmountException e) {
+            System.out.println("Transaction failed: " + e.getMessage());
+        }
+
+        System.out.println("Final Balance: $" + account.getBalance());
+    }
+}
+Explanation:
+1. Custom Exceptions:
+- 'InsufficientFundsException' is thrown when a withdrawal amount exceeds the available balance.
+- 'InvalidAmountException' is thrown when a deposit or withdrawal amount is less than or equal to zero.
+2. BankAccount Class:
+- Contains methods for depositing, withdrawing, and checking the balance.
+- Uses custom exceptions to handle invalid transactions.
+3. BankingApplication Class:
+- Demonstrates the creation of a BankAccount object and performs deposit and withdrawal operations.
+- Uses try-catch blocks to handle exceptions and print appropriate error messages.
+- Ensures that the program continues to run even if an exception is thrown during a transaction.
+
+This example shows how you can implement exception handling in a real-life project to manage errors gracefully and provide informative messages to the users.

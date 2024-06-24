@@ -1,0 +1,44 @@
+-- There are 8 types of Primitive data types are there
+1. boolean data type
+2. char data type
+3. byte data type
+4. short data type
+5. int data type
+6. long data type
+7. double data type
+8. float data type
+
+-- Table
+1. boolean data type:-
+- default value - false
+- default size - 1 bit
+
+2. char (character) data type:-
+- default value - \u0000
+- default size - 2 bit
+
+3. byte data type:-
+- default value - 0
+- default size - 1 byte
+
+4. short data type:-
+- default value - 0
+- default size - 2 byte
+
+5. int data type (integer):-
+- default value - 0
+- default size - 4 byte
+
+6. long data type:-
+- default value - 0L
+- default size - 8 byte
+
+7. double data type:-
+- default value - 0.0d
+- default size - 8 byte
+
+8. float data type:-
+- default value - 0.0f
+- default size - 4 byte
+
+-- Description

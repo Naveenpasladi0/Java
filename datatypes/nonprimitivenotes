@@ -1,0 +1,78 @@
+-- There are 4 types of non primitive data types are there
+1. Class
+2. String
+3. Array
+4. Interface
+
+-- Description
+1. class:- Class is a user-defined data type that is used to create objects. A class contains a set of properties and methods that are common and exhibited by all the objects of the class.
+There are various components of a class while its declaration:
+- Access modifier:- A class can be declared as public by using the public keyword or can even has default access where there is no need to include any access modifier.
+- Class Name:- The class name should have an initial letter in the capital according to the naming conventions used. it is used for class identification and object creation.
+- Super Class:- It is not always necessary to have a present class obviously, but if a class needs to extend and inherit the properties of its parent class, the name of the parent class, the name of the parent class can be written preceded by the keyword extends.
+- Interfaces:- A class can implement any number of interface where a list of interface is included preceded by the keyword implements.
+- Body and Members: The body of a class is surrounded by curly braces {} and it contains data members and methods inside it.
+
+Example :-  In the example below, we have created a class with the class name Demo outside the public Main class.
+
+It consists of two methods: add and sub with parameters to perform addition and subtraction operations. Also, it contains a default constructor that will be invoked automatically upon creating an object and will print the value of res variable (class member variable).
+
+Explanation:
+Upon creating an object of class Demo, we have invoked two functions with some parameters to perform addition and subtraction and the result will be then displayed.
+
+2. String :- Strings in Java are designed in such a way that they can hold a sequence of characters in a single variable, unlike character arrays where there are separate char entities. There is no need to end strings in Java with the null character which is compulsory in the case of C/C++.
+
+Example 1 :- In this Java example code, we have declared two strings : str1 and str2 using the non-primitive data type String and initialized them with some values. In the end, we have printed the values of both the strings using a concatenation of space in between.
+
+Example 2 :- In this example, we have used an alternative method of declaring the string str1 using the new operator where the sequence of characters is passed as a single parameter to the new String() constructor and a reference to the String object is stored in str1.
+
+3. Array :- Arrays are non-primitive data types in Java that are used to store elements of the same data type in a contiguous manner. They are not pre-defined and users have to declare and initialize arrays by themselves. Arrays have a unique reference name by which all their elements are accessed. Elements are stored in an indexed manner where the index starts from 0.
+
+Key points to remember about Arrays in Java :
+
+- In Java, all arrays are dynamically allocated and their size can be declared by the programmer dynamically at run time. This means memory space is allocated to Java arrays at run time rather than compile time.
+- The size of an array must be specified by an integer value and not long or short.
+
+Example :- In the example below, we have declared and initialized arr1 with elements 1,2,3,4,5 and for arr2 of size 5, the user will input the elements. After that, we print the values of elements of both the arrays as output.
+
+4. Interface :- Interface in Java is a tool to achieve abstraction. Interface can contain non-implemented methods (without the method body) also known as abstract methods. This is the main difference between a class and an interface. Interfaces in Java may contain:
+
+- Abstract methods
+- Default and static methods (since Java 8)
+- Private methods (since Java 9)
+
+There are some key points to remember about interfaces in Java :
+
+- If a class implements an interface, then it must also implement all the abstract methods of that interface otherwise we need to declare that class as an abstract class.
+- Interface specifies a set of methods that the class has to implement. In short, the interface is a blueprint of the class.
+
+Example :- In this Java example code, we have implemented an interface consisting of two abstract methods declarations: void mult() and void div() without their bodies. Now, they need to be implemented by the class Solve where we will implement both the methods.
+
+Then we have made an object obj of Solve class and using this, we will invoke mult() and div() methods for multiplication and division operations. At the end, the result after mathematical operations will be displayed as output.
+
+- - - - - - - - - - - - - - Difference Between Primitive And Non-Primitive Data Types In Java - - - - - - - - - - - - - -
+
+- In Java programming language, Primitive data types are pre-defined in the system whereas Non-Primitive data types are user-defined and programmers can easily create and modify them (except String class).
+
+- In Primitive data types, variables can store only one value at a time whereas, in Non-Primitive data types, we can store multiple values of either the same data type or different data types in one variable.
+
+- For Primitive data types, variables, or the data is stored on a stack whereas, for Non-Primitive data types, a stack holds a reference to the object on heap memory. This object is the data whose memory location is given as a reference to the variable.
+
+- Primitive data types start with the lower-case letter while in the case of Non-Primitive data types, they need to start with an upper-case initial letter.
+
+For example :-
+Primitive Data Types: int, long, char, byte, short, boolean, etc.
+Non-Primitive Data Types: Array, Class, String, Interface.
+
+- - - - - - - - - - - - - - Conclusion - - - - - - - - - - - - - -
+
+- Java programming language has two categories of data types which are classified as Primitive and Non-Primitive data types.
+- Non-Primitive data types in Java are user-defined & can be easily created or modified by the programmers. They can be used to store multiple values of either the same data type or different data types in a single variable. They always start with the initial first letter in capital.
+- Non-Primitive data types are classified as Array, Class, String, and Interface.
+Arrays in Java are used to store elements of the same data type in a contiguous manner. Its indexing starts from 0 and ends at (array_size-1).
+Syntax 1 : int []arr = new int[5];
+Syntax 2 : int arr[] = {1,2,3,4,5};
+- Class is a user-defined data type that is used to create objects. It contains a set of properties and methods that are common and exhibited by all the objects of the class.
+- Strings in Java are designed in such a way that they can hold a sequence of characters in a single variable.
+Syntax : String str = "Learning stage!";
+Interface includes both methods and variables just like a class but the only difference is that the methods declared inside an interface can be abstract. Interface is the blueprint of a class.

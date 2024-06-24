@@ -1,0 +1,33 @@
+- - Classes and Objects
+In Java, classes and objects are fundamental concepts in object-oriented programming (OOP). Here's an overview along with examples to help you understand these concepts:
+
+Classes in Java
+- A class is a blueprint for creating objects. It defines a datatype by bundling data and methods that work on the data into one single unit.
+
+Components of a Class:
+. Fields: Variables that hold the state of an object.
+. Methods: Functions that define the behavior of the object.
+. Constructors: Special methods to initialize objects.
+
+Objects in Java
+. An object is an instance of a class. When a class is instantiated, memory is allocated for the object, and the constructor is called to initialize the object.
+
+-> Explanation:
+> Class Definition:
+- The Car class has three private fields: color, model, and year.
+- It has a constructor to initialize these fields.
+- It has a method displayDetails() to print the car details.
+- It includes getter and setter methods to access and modify the fields.
+
+> Object Creation:
+- In the Main class, two Car objects car1 and car2 are created using the new keyword and the Car constructor.
+- The displayDetails() method is called on both objects to print their details.
+- The color of car1 is changed using the setColor() method, and the updated color is printed using the getColor() method.
+
+> Summary
+- Class: A blueprint that defines fields, methods, and constructors.
+- Object: An instance of a class, created using the new keyword followed by a constructor call.
+- Fields: Variables that hold the object's state.
+- Methods: Functions that define the object's behavior.
+- Constructors: Special methods to initialize new objects.
+Using classes and objects, Java allows for the modeling of real-world entities and scenarios, enabling the creation of modular, reusable, and maintainable code.

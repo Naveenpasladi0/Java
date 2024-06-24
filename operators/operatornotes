@@ -1,0 +1,133 @@
+-- Operators in Java
+
+-- Operator in Java is a symbol that is used to perform operations. For example: +, -, *, / etc.
+
+-- There are many types of operators in Java which are given below:
+
+- Unary Operator,
+- Arithmetic Operator,
+- Shift Operator,
+- Relational Operator,
+- Bitwise Operator,
+- Logical Operator,
+- Ternary Operator and
+- Assignment Operator.
+
+Java Operator Precedence
+
+- - - - - - - - - - - - - - - - - - - - - -
+1 - Operator Type :- Unary Operator
+Category :- postfix / Precedence :- expr++
+Category :- prefix / Precedence :- expr--
+- - - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - - - - - -
+2 - Operator Type :- Arithmetic Operator
+Category :- Multiplicative / Precedence :- * / %
+Category :- Additive / Precedence :- + -
+- - - - - - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - - -
+3 - Operator Type :- Shift Operator
+Category :- Shift / Precedence :- << >> >>>
+- - - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+4 - Operator Type :- Relational Operator
+Category :- Comparison / Precedence :- < > <= >= instanceof
+Category :- equality / Precedence :- == !=
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+5 - Operator Type :- Bitwise Operator
+Category :- bitwise AND / Precedence :- &
+Category :- bitwise exclusive OR / Precedence :- ^
+Category :- bitwise inclusive OR / Precedence :- |
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - - -
+6 - Operator Type :- Logical Operator
+Category :- logical AND / Precedence :- &&
+Category :- logical OR / Precedence :- | |
+- - - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - -
+7 - Operator Type :- Ternary Operator
+Category :- ternary / Precedence :- ? :
+- - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+8 - Operator Type :- Assignment Operator
+Category :- assignment / Precedence :- = += -= *= /= %= ^= |= <<= >>= >>>=
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1 - Java Unary Operator
+The Java unary operators require only one operand. Unary operators are used to perform various operations i.e:
+- Incrementing / decrementing a value by one
+- Negating an expression
+- Inverting the value of a boolean
+
+2 - Java Arithmetic Operator
+Java arithmetic operators are used to perform addition, subtraction, multiplication, and division. They act as basic mathematical operations.
+
+3 - Java Shift Operators
+3.1 - Java left shift operator
+3.2 - Java right shift operator :- The Java right shift operator >> is used to move the value of the left operand to right by the number of bits specified by the right operand.
+3.3 - Java shit operator
+
+4 - Relational Operators
+In Java, relational operators are used to compare values. They return a boolean result, indicating whether the specified relationship between the operands is true or false. Here are the commonly used relational operators in Java
+4.1 - Equality (==) :- - Check if two values are equal.
+- Example :- 'a == b' (true if 'a' is equal to 'b').
+4.2 - Inequality (!=); :- Check if two values are not equal.
+- Example :- 'a !=b' (true if 'a' is not equal to 'b')
+4.3 - Greater Than (>): :- Checks if the left operand is greater than the right operand.
+- Example :- 'a > b' (true if 'a' is greater than 'b').
+4.4 - Less Than (<): :- Checks if the left operand is less than the right operand.
+- Example :- 'a < b' (true if 'a' less than 'b').
+4.5 - Greater Than or Equal To (>=): :- Checks if the left operand is grater than or equal to the right operand.
+- Example :- 'a >= b' (true if if 'a' is greater than or equal to 'b')
+4.6 - Less Than or Equal To (<=): :- Check if the left operand is less than or equal to the right operand.
+- Example :- 'a <= b' (true if 'a' is less than or equal to 'b')
+
+Relational operators are commonly is used in conditional statements (if, else if, else), loops, and other-situations where you need to compare values in your java programs.
+
+5 - Bitwise Operators
+In Java, bitwise operators manipulate individual individual bits of primitive data types at the binary level. There are six bitwise operators in Java:
+5.1 - AND Operator : :- Performs a bitwise AND operation between corresponding bits of two operands.
+- Example :- 'a & b' (bitwise AND of 'a' and 'b')
+5.2 - OR Operator ('|'): :- Performs a bitwise OR operation between corresponding bits of two operands.
+- Example :- 'a | b' (bitwise OR of 'a' and 'b')
+5.3 - XOR Operator ('^'): :- Performs a bitwise XOR (exclusive OR) operation between corresponding bits of two operands
+- Example :- 'a ^ b' (bitwise XOR of 'a' and 'b')
+5.4 - NOT Operator ('-'): :- Inverts the bits of its operand. Changing 1s to 0s and vice versa
+- Example :- '-a' (bitwise NOT of 'a')
+5.5 - Left Shift Operator ('<<'): :- Shifts the bits of the left operand to the left by specified number of positions
+- Example :- a << b (left shift a by b positions).
+5.6 - Right Shift Operator ('>>'): :- Shifts the bits of the left operand to the right by a specified number of positions
+- Example :- 'a << b' (left shift 'a' by 'b' (left shift 'a' by 'b' positions)
+
+6 - Logical Operators
+In Java, logical operators are used to perform logical operations on boolean values. There are three types of Logical Operators:
+6.1 - Logical AND ('&&'): :- Returns true if both operands are true.
+- Example :- 'a && b' (true if both 'a' and 'b' are true)
+6.2 - Logical OR ('||'): :- Returns true if one of the operand is true.
+- Example :- 'a || b' (true if either 'a' or 'b' or both are true)
+6.3 - Logical NOT ('|'): :- Returns true if the operand is false and vice versa
+- Example :- '|a' (true if 'a' is false)
+
+7 - Ternary Operator
+The Ternary in Java is a shorthead way of writing an 'if-else' statement. It is a condition operator that takes three operands and return a value that is based on the evaluation of a boolean expression.
+
+- The syntax of ternary operator is :-
+result = (condition) ? expression_if_true : expression_is_false:
+- - > If condition is true the value of expression_if_true is assigned to the variable result.
+- - > If the condition is false, the value of expression_if_false is assigned to the variable result.
+
+Ternary operators are concise and often used for simple conditional assignments. However, for more complex conditions or multiple statements, if-else statements are generally preferred for better readability.
+
+8 - Assignment Operator
+In Java, the assignment operator (=) is used to assign a value to a variable. The basic syntax is:
+Condition :- variable = expression
+Here, the value of the expression on the right side is assigned to the variable on the left side.
+Additionally, there are compound assignment operators in Java that combine an arithmetic operation with an assignment. For example: It's important to note that the assignment operator (=) is different from the equality operator (==), which is used to compare values for equality.

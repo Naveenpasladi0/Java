@@ -1,0 +1,24 @@
+-- Generics in Java
+- Generics in Java allow you to define classes, interfaces, and methods with a placeholder for the type of data they operate on.
+- This enables type-safe operations on various types of data without compromising code reusability and maintainability.
+
+- Generics ensure that you can work with different types without needing to write different code for each type. They also provide compile-time type checking, reducing the risk of ClassCastException at runtime.
+
+> Basic Syntax of Generics
+1. Generic Classes
+Example:- Box Class
+A 'Box' class can store objects of any type using generics.
+2. Generic Methods
+Example:- Utility Method to Print Array Elements
+A generic method to print elements of an Array.
+3. Generic Interface
+Example:- A Comparable Interface
+The 'Comparable' interface in java is a generic interface that allows you to compare objects.
+----Real Life Use Cases----
+1. Collection framework:- The Java collections framework extensively uses generics to provide type-safe collections. For example, 'List<T>', 'Map<k, v>', Set<T>',etc.
+2. Utility Libraries:- Libraries like Apache Common and Google Guava use generics to provide utility method that can work with any tye.
+3. Database Access Object (DAO):- Generics can be used in DAO to handle different types of entities in a type-safe manner.
+----Benefits of Generics----
+1. Type Safety:- Generics provide compile-time type checking. reducing time errors.
+2. Code reusability:- Generic code can be used for different types without modification.
+3. Elimination of Casts:- Generics eliminate the need for explicit type casting.

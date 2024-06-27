@@ -1,0 +1,24 @@
+- - Lambda Expressions and Streams in Java (Java 8 Or later only)
+Lambda expressions and streams in java are powerful features introduced in Java 8 to simplify and improve the efficiency of working with collections and performing bulk data operations.
+
+Real life example: E-commerce Order Processing System
+- Consider an e-commerce order processing system where we need to filter, sort, and process a list of orders. This example demonstrates the use of lambda expressions and streams to achieve these tasks efficiently.
+
+Implementation:-
+1. Order Class: Represents an order with attributes like order ID, customer name, and order amount.
+2. Main Class: Demonstrates filtering, sorting, and processing orders using lambda expressions and streams.
+
+Explanation:-
+1. Order Class: Represents an order with attributes for order ID, customer name, and order amount. The toString method is overridden for a readable representation of the order.
+2. Filtering Orders: This lambda expression filters the orders where the order amount is greater than 200.
+3. Sorting Orders: This lambda expression sorts the orders by order amount in ascending order.
+4. Mapping Customer Names: This lambda expression extracts the customer names from the orders.
+5. Calculating Total Order Amount: This lambda expression calculates the total order amount by summing the order amounts.
+
+Benefits of Using Lambda Expressions and Streams:-
+1. Concise Code: Lambda expressions and streams reduce boilerplate code, making the code more readable and concise.
+2. Improved Performance: Streams can leverage multi-core architectures for parallel processing, improving performance.
+3. Ease of Maintenance: With cleaner and more expressive code, maintaining and extending the codebase becomes easier.
+
+Conclusion
+Lambda expressions and streams in Java provide a powerful way to work with collections, enabling concise and efficient data processing. In a real-life e-commerce order processing system, these features can be used to filter, sort, map, and aggregate data, leading to better performance and maintainability.

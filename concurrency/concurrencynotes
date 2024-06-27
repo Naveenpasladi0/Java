@@ -1,0 +1,27 @@
+- - Concurrency in Java
+Concurrency in Java with real life example:-
+Concurrency in java allows multiple tasks to be executed simultaneously, improving the efficiency and perform applications. This is especially useful in scenario where tasks are independent of each other or can be performed in parallel.
+
+Real life example: Online Food Ordering System:-
+Consider an online food ordering system while multiple users can place orders, and the system needs to process these orders concurrently to ensure smooth and efficient user experience.
+
+Implementation:-
+1. Order Class: Represents an order placed by a user.
+2. Order Process Class: Processes orders concurrently.
+3. Main Class:- Simulates multiple users placing orders simultaneously.
+
+Explanation:-
+1. Order Class: Represents a food order with attributes for order ID, item name, and quantity. The toString method is overridden for a readable representation of the order.
+2. Order Processor Class: Implements the Runnable interface to process an order. The run method simulates the processing time using TimeUnit.SECONDS.sleep.
+3. Main Class ('OnlineFoodOrderingSystem');
+- Creates an ExecutorService with a fixed thread pool of 3 threads.
+- Submits multiple OrderProcessor tasks to the executor service, each processing a different order.
+- Shuts down the executor service once all tasks are submitted.
+
+Benefits:-
+1. Improved Performance: Multiple orders are processed simultaneously, reducing the overall time taken.
+2. Better Resource Utilization: Utilizes CPU cores more effectively by distributing tasks across multiple threads.
+3. Responsive System: Users can place orders without waiting for previous orders to complete, leading to a better user experience.
+
+Conclusion:-
+Concurrency in Java is essential for building efficient and responsive applications, especially in real-life scenarios like an online food ordering system. By using the ExecutorService and implementing the Runnable interface, tasks can be processed concurrently, ensuring better performance and user satisfaction.

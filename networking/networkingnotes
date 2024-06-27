@@ -1,0 +1,43 @@
+- - Networking Notes
+Java provides a robust library for networking, allowing applications to communicate over a network using classes in the java.net package. These classes enable developers to create both client and server applications that can communicate using protocols like TCP and UDP.
+
+Real-Life Example: Chat Application:-
+- Let's create a simple chat application where multiple clients can connect to a server and send messages to each other. This example will demonstrate how to use sockets to create a client-server application.
+
+Implementation:-
+- ChatServer Class: Listens for client connections and relays messages.
+- ChatClient Class: Connects to the server and sends/receives messages.
+- Main Class: Starts the server and clients.
+
+Explanation:-
+1. ChatServer Class:
+- The ChatServer class listens for client connections on a specified port.
+- When a client connects, a new ClientHandler object is created and started in a new thread.
+- The broadcastMessage method sends a message to all connected clients except the sender.
+- The removeClient method removes a client from the set of connected clients when they disconnect.
+
+2. ClientHandler Class:
+- The ClientHandler class handles communication with a single client.
+- It reads messages from the client and broadcasts them to other clients using the ChatServer.broadcastMessage method.
+- When a client disconnects, the ClientHandler removes itself from the server's set of clients.
+
+3. ChatClient Class:
+- The ChatClient class connects to the server using the server's address and port.
+- It creates a new thread to read messages from the server and print them to the console.
+- It reads user input from the console and sends it to the server.
+
+***** How to Run the Example *****
+
+1. Compile the Java files:
+javac ChatServer.java ChatClient.java
+
+2. Start the chat server:
+java ChatServer
+
+3. Start one or more chat clients:
+java ChatClient
+
+4. Type messages in the client consoles to send them to the server and other connected clients.
+
+Conclusion:-
+Networking in Java is powerful and versatile, enabling the creation of both client and server applications. This chat application example demonstrates how to use sockets for real-time communication between multiple clients, showcasing the basics of network programming in Java.
